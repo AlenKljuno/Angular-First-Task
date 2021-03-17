@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.pinimg.com/originals/4e/c8/89/4ec889505488448d78c0eb5c3b1f76b6.png" >
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app = 'app'>
+    <div ng-controller = 'main'>
+        <span >{{poruka}}-{{user.firstName}}{{user.lastName}}</span>
+<table border="1px solid black" style="margin: auto;" >
+<tr ng-repeat = 'x in tabela'>
+    <td>{{$index}}</td>
+    <td>{{x.ime}}</td>
+    <td>{{x.like}}</td>
+    <td>{{x.dislike}}</td>
+    <td><button ng-click = 'like(x)'>like</button> <button ng-click = 'dislike(x)'>dislike</button></td>
+</tr>
+</table>
+<ul>
+    <li ng-repeat = 'car in cars' >{{car.mark}}
+    <ul>
+        <li ng-repeat = 'model in car.model'>{{model}}</li>
+    </ul>
+    </li>
+</ul>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
